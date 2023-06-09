@@ -95,10 +95,9 @@ for strategy_A in strategies_A:
 
 print('Our own classical value is', best_value)
 
-
 # Toqito's entangled and classical value
-prob_mat = np.array([[q(x,y) for y in y_values] for x in x_values])
-pred_mat = np.array([[f(x,y) for y in y_values] for x in x_values])
+prob_mat = np.array([[q(x, y) for y in y_values] for x in x_values])
+pred_mat = np.array([[f(x, y) for y in y_values] for x in x_values])
 
 game = XORGame(prob_mat, pred_mat)
 print('Toqito\'s quantum value is', game.quantum_value())
