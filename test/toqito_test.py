@@ -30,7 +30,7 @@ def q(x, y):
 
 
 def f(x: list, y: list):
-    return x[0] * y[0]
+    return x[0] and y[0]
 
 
 # This function shouldn't be changed
@@ -102,3 +102,5 @@ pred_mat = np.array([[f(x, y) for y in y_values] for x in x_values])
 game = XORGame(prob_mat, pred_mat)
 print('Toqito\'s quantum value is', game.quantum_value())
 print('Toqito\'s classical value is', game.classical_value())
+
+print(str(0.5 + problem.value / 2) + ', ' + str(best_value) + ', ' + str(game.quantum_value()) + ', ' + str(game.classical_value()))
